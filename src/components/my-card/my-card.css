@@ -1,0 +1,53 @@
+.my-card-wrapper{
+   
+    width: 500px;
+    height: auto;
+    padding: 10px;
+    border: 1px solid black;
+   display: flex;
+  text-align: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+
+}
+.card-custom{
+    width: 250px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 2px solid rgb(174, 90, 90);
+    padding: 20px;
+}
+button{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #252522;
+    border-radius: 5px;
+    color: #0d0d0e;
+    background-color: transparent;
+}
+button:hover{
+    background-color: #55645f;
+}
+.btn-react
+{
+    background-color: rgb(64, 128, 174);
+}
+.btn-stencil
+{
+    background-color: rgb(205, 134, 48);
+}
+.my-input{
+    width: 100%;
+    padding: 12px 12px;
+    display: inline-block;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 20px;
+}

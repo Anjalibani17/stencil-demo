@@ -7,8 +7,71 @@
 
     <script type="module" src="/build/stencil-demo.esm.js"></script>
     <script nomodule src="/build/stencil-demo.js"></script>
+
+    <style>
+      body{
+        font-family: sans-serif;
+      }
+      .side-nav ul{
+        list-style: none;
+
+      }
+      .side-nav li{
+        margin: 2px;
+      }
+      .side-nav a{
+        text-decoration: none;
+        color: rgb(10, 10, 10);
+      }
+       .my-card-wrapper{
+   
+   width: 100px;
+   height: auto;
+   padding: 10px;
+   border: 1px solid rgb(203, 24, 24);
+  display: flex;
+ text-align: center;
+ justify-content: center;
+ padding: 10px;
+ margin: 10px;
+ border-radius: 10px;
+
+}
+
+    </style>
   </head>
   <body>
-    <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
+    <!-- <h2 class="my-card-wrapper">another component</h2> -->
+    <!-- pass props here -->
+    <!-- <my-card name="anjali"></my-card>
+    <search-world></search-world>
+    <get-data first="idx" middle="pvt" last="LTD"></get-data> -->
+    <side-drawer title="anjali" >
+      <nav class="side-nav">
+        <ul>
+          <li>
+            <a href="/"> A link </a>
+          </li>
+          <li>
+            <a href="/"> B link </a>
+          </li>
+          <li>
+            <a href="/"> C link </a>
+          </li>
+        </ul>
+      </nav>
+    </side-drawer>
   </body>
+  <script>
+    const sideDrawer=document.querySelector('side-drawer');
+    setTimeout(() => {
+      //it will only change title name but not tag attribute
+     // sideDrawer.title="changed";
+     //to resolve it
+      sideDrawer.setAttribute('title','it is changed!!')
+      
+    }, 3000);
+   
+    console.log(sideDrawer)
+  </script>
 </html>
