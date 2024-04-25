@@ -7,12 +7,13 @@ aside{
     height: 100vh;
     background-color: rgb(227, 225, 226);
     box-shadow: 0 2px 8px black;
+    transition: left 0.3s ease-out;
 }
 /* if my component recive open props then it will apply left 0 style */
 /* host will work with only shadow true otherwise you need */
 :host([open]) aside{
     left: 0;
-    background-color: red;
+   
 }
 header{
     padding: 1rem;
@@ -22,4 +23,38 @@ header h1{
     color: white;
     font-size: 1.5rem;
     margin: 0;
+}
+header button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    background: transparent;
+    font-size: 2rem;
+    color: white;
+    border: none;
+}
+header button:focus{
+    outline: none;
+}
+#tabs{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0.5rem 0.5rem;
+}
+#tabs button
+{
+    border: 1px solid black;
+    width: 30%;
+    color: black;
+    text-align: center;
+    font: inherit;
+    background: white;
+    padding: 0.15rem 0;
+}
+#tabs button:hover,
+#tabs button.active{
+    background-color: black;
+    color: white;
 }

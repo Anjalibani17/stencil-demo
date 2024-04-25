@@ -46,7 +46,9 @@
     <!-- <my-card name="anjali"></my-card>
     <search-world></search-world>
     <get-data first="idx" middle="pvt" last="LTD"></get-data> -->
-    <side-drawer title="anjali" >
+    <button id="side-drawer-btn" style="z-index: 1000;background-color: black;color: white; ">click to open</button>
+    <side-drawer title="main-menu" >
+      
       <nav class="side-nav">
         <ul>
           <li>
@@ -64,6 +66,18 @@
   </body>
   <script>
     const sideDrawer=document.querySelector('side-drawer');
+    const sideDrawerBtn=document.querySelector('#side-drawer-btn');
+    console.log(sideDrawer)
+    sideDrawerBtn.addEventListener('click',()=>{
+     
+      if(!sideDrawer.open)
+    {
+      console.log("side-menu opened");
+      sideDrawer.open=true;
+    }
+   
+    })
+ 
     setTimeout(() => {
       //it will only change title name but not tag attribute
      // sideDrawer.title="changed";
